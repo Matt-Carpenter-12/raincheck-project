@@ -1,8 +1,8 @@
-const favoriteCity = document.getElementById$('favoriteCityBtn');
+const favoriteCity = document.getElementById('favoriteCityBtn');
 const themeToggle = document.getElementById('themeBtn');
 const submit = document.getElementById("submitBtn");
 const userCity = document.getElementById("userCity");
-const location = document.getElementById("location");
+const city = document.getElementById("location");
 const temperature = document.getElementById("temp")
 const weatherDescription = document.getElementById("weather-description");
 const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
@@ -18,13 +18,23 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
     if (!cityName) alert("Please Enter A City");
 
     
-    const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${weatherApiKey}`
+    const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${weatherApiKey}&units=imperial`
 
     // Fetches the data from the weather api and displays it on the console
     fetch(weatherApi)
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+    
+        // Weather information is being displayed to the page
+        city.innerHTML = `<h2>${data.name}, ${data.sys.country}</h3>`
+        temperature.innerHTML = `
+        <h3>${data.main.temp}</h3>
+        <h3>${data.main.temp_min}</h3>
+        <h3>${data.main.temp_max}</h3>
+        `
+        weatherDescription.innerHTML = `<p>${data.weather[0].description}</p>`
+
+        // console.log(data)
     } ).catch (() => {
         console.error();
     })
