@@ -1,50 +1,103 @@
+/* theming */
+:root {
+  --primary-color: #152B59;
+  --seconday-color: #DCE4F2;
+}
+
+.cloudy-theme {
+  --primary-color:#DCE4F2;
+  --secondary-color: #152B59;
+}
+
+.rainy-theme {
+  --primary-color: ;
+  --secondary-color: ;
+}
+
+.montserrat-300 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-400 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* main page style */
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "fenwick", sans-serif;
   font-weight: 10px;
   font-style: normal;
   font-size: 10px;
   line-height: 1.5;
-  color: #fefefe;
-  background-color: #d9d9d9;
+  color: var(--seconday-color);
+  background-color: var(--primary-color);
   box-sizing: border-box;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin: 0px;
 }
 
 header {
-  display: flexbox;
+  display: flex;
   float: center;
   text-align: center;
+  justify-content: space-between;
   width: 100%;
-  height: 400px;
+  height: 100px;
   margin-top: 0px;
   margin-bottom: 0px;
-  background-image: url(./Images/Hurricane\ from\ space.jpeg);
+  padding: 20px;
+  background-color: #152B59;
   background-position: center;
 }
 
+button {
+  height: 20px;
+  text-align: center;
+}
+
 h1 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-bottom: 100px;
-  padding-top: 50px;
+  margin: 0px;
   font-size: 70px;
-  color: #112953;
-  text-shadow: -1px 0 rgb(74, 100, 247), 0 1px rgb(64, 119, 187),
-    1px 0 rgb(141, 168, 249), 0 -1px rgb(187, 212, 243);
-  background-color: rgb(0, 0, 0, 30%);
+  color: var(--secondary-color);
+  padding:
+  /* text-shadow: -1px 0 rgb(74, 100, 247), 0 1px rgb(64, 119, 187),
+    1px 0 rgb(141, 168, 249), 0 -1px rgb(187, 212, 243); */
+  /* background-color: rgb(0, 0, 0, 30%); */
 }
 
 .search {
   width: 100%;
   height: 145px;
   background-color: rgb(0, 0, 0, 30%);
+}
+
+.weather {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: black;
+  font-size: 20px;
+  height: 450px;
+  margin-left: 1%;
+  margin-right: 1%;
+  background-image: url(./Images/cloudy-bg.jpg);
+  background-position: center;
+}
+
+.current-location {
+  font-size: 40px;
+  padding-top: 20px;
+}
+
+.current-temp {
+  font-size: 30px;
 }
