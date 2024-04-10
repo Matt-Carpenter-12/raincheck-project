@@ -97,3 +97,9 @@ function weatherConditionId (){
    }
 }
 */
+
+
+//toggling theme (placeholer)
+// themeToggle.addEventListener("click", () =>{
+//     document.body.classList.toggle('cloudy-theme');
+// })
