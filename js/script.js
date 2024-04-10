@@ -1,10 +1,10 @@
-const favoriteCity = document.getElementById('favoriteCityBtn');
-const themeToggle = document.getElementById('themeBtn');
-const submit = document.getElementById("submitBtn");
-const userCity = document.getElementById("userCity");
-const city = document.getElementById("location");
-const temperature = document.getElementById("temp")
-const weatherDescription = document.getElementById("weather-description");
+const favoriteCity = document.querySelector('#favoriteCityBtn');
+const themeToggle = document.querySelector('#themeBtn');
+const submit = document.querySelector("#submitBtn");
+const userCity = document.querySelector("#userCity");
+const city = document.querySelector(".current-location");
+const temperature = document.querySelector(".current-temp")
+const weatherDescription = document.querySelector(".current-condition");
 const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
 
 
@@ -26,11 +26,11 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
     .then(data => {
     
         // Weather information is being displayed to the page
-        city.innerHTML = `<h2>${data.name}, ${data.sys.country}</h3>`
+        city.innerHTML = `<h2>${data.name}, ${data.sys.country}</h2>`
         temperature.innerHTML = `
-        <h3>${data.main.temp}</h3>
-        <h3>${data.main.temp_min}</h3>
-        <h3>${data.main.temp_max}</h3>
+        <h4>Current Temp: ${data.main.temp}°F</h4>
+        <h4>Min Temp: ${data.main.temp_min}°F</h4>
+        <h4>Max Temp: ${data.main.temp_max}°F</h4>
         `
         weatherDescription.innerHTML = `<p>${data.weather[0].description}</p>`
 
