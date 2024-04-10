@@ -1,28 +1,45 @@
 const favoriteCity = $('#favoriteCityBtn');
 const themeToggle = $('#themeBtn');
-const submitBtn = $('#submitBtn');
-const weatherApiKey = "9f93c87d7a3641b68c10eb22514cfde4";
-const userCity = $('#userCity')
+const submit = document.getElementById("submitBtn");
+const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
+const userCity = document.getElementById("userCity")
 
 
 
-submitBtn.addEventListener("submit", (event) => {
-    event.preventDefault();
-    getWeatherData();
-})
+ const getWeatherData = () => {
+    
+    // Value of the city name from the user's input
+    const cityName = userCity.value;
+
+    // Alerts user if a city was not entered
+    if (!cityName) alert("Please Enter A City");
 
     
-async function getWeatherData(city){
+    const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${weatherApiKey}`
+
+    // Fetches the data from the weather api and displays it on the console
+    fetch(weatherApi)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+    } ).catch (() => {
+        console.error();
+    })
+ }
+
+//  Event Listener for the submit and it invokes the getWeatherData function
+ submit.addEventListener("click", event => {
+    event.preventDefault();
+    getWeatherData()
+});
 
     //api for current day forecast
-    const currentWeatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApiKey}`
+    
 
     //api for five day forecast
     // const weatherFiveDayForecast = `api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${weatherApiKey}`
 
-    const response = await fetch(currentWeatherApi);
-    console.log(response)
-
+   
 
     //Possible ways to fetch the api data 
     /*
@@ -30,7 +47,7 @@ async function getWeatherData(city){
     const result = await data.json()
     console.log(result.data)
     */
-}
+
 
 
 
