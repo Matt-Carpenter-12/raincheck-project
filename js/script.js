@@ -1,8 +1,11 @@
-const favoriteCity = $('#favoriteCityBtn');
-const themeToggle = $('#themeBtn');
+const favoriteCity = document.getElementById$('favoriteCityBtn');
+const themeToggle = document.getElementById('themeBtn');
 const submit = document.getElementById("submitBtn");
+const userCity = document.getElementById("userCity");
+const location = document.getElementById("location");
+const temperature = document.getElementById("temp")
+const weatherDescription = document.getElementById("weather-description");
 const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
-const userCity = document.getElementById("userCity")
 
 
 
