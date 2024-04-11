@@ -82,8 +82,11 @@ header {
 }
 
 button {
-  height: 20px;
+  height: 30px;
   text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 2px;
 }
 
 h1 {
