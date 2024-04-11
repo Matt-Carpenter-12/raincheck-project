@@ -34,9 +34,11 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
         // Weather information is being displayed to the page
         city.innerHTML = `<h2>${data.name}, ${data.sys.country}</h2>`
         temperature.innerHTML = `
-        <h3>${mainTemp}°F</h3>
-        <p>L: ${minTemp}°F | H: ${maxTemp}°F</p>`
-        weatherDescription.innerHTML = `<p>${data.weather[0].main}</p>`
+        <h4>Current Temp: ${data.main.temp}°F</h4>
+        <h4>Min Temp: ${data.main.temp_min}°F</h4>
+        <h4>Max Temp: ${data.main.temp_max}°F</h4>
+        `
+        weatherDescription.innerHTML = `<p>${data.weather[0].description}</p>`
 
         // console.log(data)
     } ).catch (() => {
@@ -71,36 +73,25 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
 
 //A way to possibly use the weather condition codes to determine the theme of the page
 
-/** 
-function weatherConditionId (){
-    const currentWeatherId = main.id
-    const fiveDayForecastId = list.weather.id;
 
-
-    const currentWeather = document.createElement("p");
-    currentWeather.getAttribute('div', )
-
+function weatherTheme (){
+    
+    const currentWeatherId = weather.main
+     //document.createElement("p");
+     //Posibly needs API Url to pull data from?
     if (currentWeatherId >= 200 && currentWeatherId < 600 ) {
-        
-        
-        console.log("theme is rainy/thunderstorm/ drizzle")
-
-    }else if (currentWeatherId >= 600 && currentWeatherId < 700){
-
-        console.log("it's snowing")
-
-    }else if (currentWeatherId >= 701 && currentWeatherId =< 781) {
-
+         console.log("theme is rainy/thunderstorm/ drizzle")
+       } else if (currentWeatherId >= 600 && currentWeatherId < 700){
+          console.log("it's snowing")
+       } else if (currentWeatherId >= 701 && currentWeatherId < 781) {
         console.log("your condition is random today and you can figure it out")
-
-    }else if (currentWeatherId === 800) {
-
+       } else if (currentWeatherId === 800) {
         console.log("clear skies")
-   }else {
-    console.log("cloudy days ahead")
+       } else {
+        console.log("cloudy days ahead")
    }
 }
-*/
+
 
 
 //toggling theme (placeholer)
