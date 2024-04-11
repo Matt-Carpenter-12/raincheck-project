@@ -25,6 +25,12 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
     .then(response => response.json())
     .then(data => {
     
+        let mainTemp = Math.floor(Math.round(data.main.temp));
+        let minTemp = Math.floor(Math.round(data.main.temp_min));
+        let maxTemp = Math.floor(Math.round(data.main.temp_max));
+
+
+
         // Weather information is being displayed to the page
         city.innerHTML = `<h2>${data.name}, ${data.sys.country}</h2>`
         temperature.innerHTML = `
@@ -33,6 +39,7 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
         <h4>Max Temp: ${data.main.temp_max}°F</h4>
         `
         weatherDescription.innerHTML = `<p>${data.weather[0].description}</p>`
+
         // console.log(data)
     } ).catch (() => {
         console.error();
