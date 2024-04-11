@@ -25,14 +25,18 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
     .then(response => response.json())
     .then(data => {
     
+        let mainTemp = Math.floor(Math.round(data.main.temp));
+        let minTemp = Math.floor(Math.round(data.main.temp_min));
+        let maxTemp = Math.floor(Math.round(data.main.temp_max));
+
+
+
         // Weather information is being displayed to the page
         city.innerHTML = `<h2>${data.name}, ${data.sys.country}</h2>`
         temperature.innerHTML = `
-        <h4>Current Temp: ${data.main.temp}°F</h4>
-        <h4>Min Temp: ${data.main.temp_min}°F</h4>
-        <h4>Max Temp: ${data.main.temp_max}°F</h4>
-        `
-        weatherDescription.innerHTML = `<p>${data.weather[0].description}</p>`
+        <h3>${mainTemp}°F</h3>
+        <p>L: ${minTemp}°F | H: ${maxTemp}°F</p>`
+        weatherDescription.innerHTML = `<p>${data.weather[0].main}</p>`
 
         // console.log(data)
     } ).catch (() => {
