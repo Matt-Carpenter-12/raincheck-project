@@ -25,11 +25,10 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
     .then(response => response.json())
     .then(data => {
     
+        // Rounds the temperature values
         let mainTemp = Math.floor(Math.round(data.main.temp));
         let minTemp = Math.floor(Math.round(data.main.temp_min));
         let maxTemp = Math.floor(Math.round(data.main.temp_max));
-
-
 
         // Weather information is being displayed to the page
         city.innerHTML = `<h2>${data.name}, ${data.sys.country}</h2>`
