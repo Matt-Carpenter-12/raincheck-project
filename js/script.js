@@ -25,6 +25,18 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
     .then(response => response.json())
     .then(data => {
     
+        const currentWeatherId = data.weather[0].main
+        if (currentWeatherId >= 200 && currentWeatherId < 600 ) {
+            console.log("theme is rainy/thunderstorm/ drizzle")
+          } else if (currentWeatherId >= 600 && currentWeatherId < 700){
+             console.log("it's snowing")
+          } else if (currentWeatherId >= 701 && currentWeatherId < 781) {
+           console.log("your condition is random today and you can figure it out")
+          } else if (currentWeatherId === 800) {
+           console.log("clear skies")
+          } else {
+           console.log("cloudy days ahead")}
+        
         // Rounds the temperature values
         let mainTemp = Math.floor(Math.round(data.main.temp));
         let minTemp = Math.floor(Math.round(data.main.temp_min));
@@ -72,29 +84,29 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
 //A way to possibly use the weather condition codes to determine the theme of the page
 
 
-function weatherTheme (){
-    const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${weatherApiKey}&units=imperial`
-    const cityName = userCity.value;
+// function weatherTheme (){
+//     const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${weatherApiKey}&units=imperial`
+//     const cityName = userCity.value;
     
 
-    fetch(weatherApi)
-     .then(response => response.json())
-     .then(data => { 
-        const currentWeatherId = data.weather[0].main
-        if (currentWeatherId >= 200 && currentWeatherId < 600 ) {
-            console.log("theme is rainy/thunderstorm/ drizzle")
-          } else if (currentWeatherId >= 600 && currentWeatherId < 700){
-             console.log("it's snowing")
-          } else if (currentWeatherId >= 701 && currentWeatherId < 781) {
-           console.log("your condition is random today and you can figure it out")
-          } else if (currentWeatherId === 800) {
-           console.log("clear skies")
-          } else {
-           console.log("cloudy days ahead")}
-        }) .catch(() => {
-            console.error();
-        }) 
-    }
+//     fetch(weatherApi)
+//      .then(response => response.json())
+//      .then(data => { 
+//         const currentWeatherId = data.weather[0].main
+//         if (currentWeatherId >= 200 && currentWeatherId < 600 ) {
+//             console.log("theme is rainy/thunderstorm/ drizzle")
+//           } else if (currentWeatherId >= 600 && currentWeatherId < 700){
+//              console.log("it's snowing")
+//           } else if (currentWeatherId >= 701 && currentWeatherId < 781) {
+//            console.log("your condition is random today and you can figure it out")
+//           } else if (currentWeatherId === 800) {
+//            console.log("clear skies")
+//           } else {
+//            console.log("cloudy days ahead")}
+//         }) .catch(() => {
+//             console.error();
+//         }) 
+//     }
      //document.createElement("p");
      //Posibly needs API Url to pull data from?
     
