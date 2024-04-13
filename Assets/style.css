@@ -1,4 +1,4 @@
-/* theming */
+/* utility classes */
 :root {
   --primary-color: #f3f6ec;
   --secondary-color: #59523e;
@@ -50,6 +50,17 @@
   font-style: normal;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border:0;
+}
 
 /* main page style */
 * {
@@ -67,10 +78,11 @@ body {
   margin: 0px;
 }
 
+/* navigation style */
 header {
   display: flex;
   float: center;
-  text-align: center;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100px;
@@ -93,6 +105,26 @@ h1 {
   font-size: 70px;
   color: var(--secondary-color);
 }
+
+/* LAUREN: disregard this if you're doing bootstrap for the hamburger menu*/
+/* .title-mobile {
+  font-size: 50px;
+}
+
+.icon-hamburger,
+.icon-close {
+  height: 40px;
+  width: 40px;
+}
+
+.menu-nav-toggle{
+  cursor: pointer;
+}
+
+.menu-nav-toggle,
+.icon-close {
+  display: none;
+} */
 
 
 /* weather section */
@@ -135,6 +167,7 @@ h1 {
 
 .song-display {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   padding: 5%;
 }
@@ -158,6 +191,6 @@ footer {
 
 
 /* mobile modifications */
-@media screen and (max-width <=1250px) {
-  
+@media screen and (max-width <=900px) {
+ 
 }
