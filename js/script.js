@@ -24,8 +24,8 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
     fetch(weatherApi)
     .then(response => response.json())
     .then(data => {
-    
-        const currentWeatherId = data.weather[0].main
+
+        const currentWeatherId = data.weather[0].id
         if (currentWeatherId >= 200 && currentWeatherId < 600 ) {
             console.log("theme is rainy/thunderstorm/ drizzle")
           } else if (currentWeatherId >= 600 && currentWeatherId < 700){
