@@ -73,6 +73,51 @@ let searchPlaylistTitle = "";
     getWeatherData()
 });
 
+
+// Function to get the Spotify access token to be used with the API call for a playlist 
+function getToken() {
+    const clientId = 'adda26d9e1f84220ae4acd844e4516f3';
+    const clientSecret = '61627fc566894be5bf4cf0176b120df7';
+
+    const url ='https://accounts.spotify.com/api/token';
+
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/x-www-form-urlencoded',
+        },
+        body: `grant_type=client_credentials&client_id=${clientId}&client_secret=${clientSecret}`,
+    }
+    fetch(url, options)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.access_token);
+    })
+} 
+
+getToken();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //api for current day forecast
     
 
