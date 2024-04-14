@@ -7,6 +7,11 @@ const temperature = document.querySelector(".current-temp")
 const weatherDescription = document.querySelector(".current-condition");
 const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
 
+const playlistColOne = document.querySelector(".song-display-col-1")
+const playlistColTwo = document.querySelector(".song-display-col-2")
+const playlistOne = document.querySelector(".playlist-one")
+const playlistTwo = document.querySelector(".playlist-two")
+const searchPlaylistTitle = "";
 
 
  const getWeatherData = () => {
