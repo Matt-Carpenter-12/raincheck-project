@@ -93,6 +93,14 @@ header {
   background-position: center;
 }
 
+#themebtn {
+  height: 30px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 2px;
+}
+
 button {
   height: 30px;
   text-align: center;
