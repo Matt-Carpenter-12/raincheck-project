@@ -92,6 +92,8 @@ function getToken() {
     .then(response => response.json())
     .then(data => {
         console.log(data.access_token);
+    }).catch(() => {
+        console.error
     })
 } 
 
