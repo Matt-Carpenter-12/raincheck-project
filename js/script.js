@@ -92,6 +92,8 @@ function getToken() {
     .then(response => response.json())
     .then(data => {
         console.log(data.access_token);
+        searchForPlaylist(data.access_token)
+        
     }).catch(() => {
         console.error
     })
@@ -99,7 +101,34 @@ function getToken() {
 
 getToken();
 
+function searchForPlaylist(token) {
+    const playlistUrl = `https://api.spotify.com/v1/search?q=happy&type=playlist&limit=10&offset=0`;
 
+    const options = {
+        method: 'GET',
+        headers: {
+            Authorization : `Bearer ${token}`
+        }
+    }
+    fetch(playlistUrl, options)
+    .then(response => response.json())
+    .then(data => {
+
+        // Selects a random playlist index
+        let randomNumOne = Math.floor(Math.random() * 10);
+        let randomNumTwo = Math.floor(Math.random() * 10);
+
+        const playlistOneId = data.playlists.items[randomNumOne].id;
+
+        const playlistTwoId = data.playlists.items[randomNumTwo].id;
+
+        playlistOne.setAttribute("src", `https://open.spotify.com/embed/playlist/${playlistOneId}`)
+        playlistTwo.setAttribute("src", `https://open.spotify.com/embed/playlist/${playlistTwoId}`)
+
+    }).catch (() => {
+        console.error
+    })
+}
 
 
 
