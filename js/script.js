@@ -145,6 +145,11 @@ function searchForPlaylist(token, search) {
         let randomNumOne = Math.floor(Math.random() * 10);
         let randomNumTwo = Math.floor(Math.random() * 10);
 
+        // Makes sure the same two playlists are not shown
+        if (randomNumTwo === randomNumOne) {
+            randomNumTwo = Math.floor(Math.random() * 10);
+        }
+
         const playlistOneId = data.playlists.items[randomNumOne].id;
 
         const playlistTwoId = data.playlists.items[randomNumTwo].id;
