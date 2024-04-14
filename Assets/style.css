@@ -93,10 +93,20 @@ header {
   background-position: center;
 }
 
+#themebtn {
+  margin-left: 25px;
+  height: 30px;
+  text-align: center;
+  font-size: 17px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 2px;
+}
+
 header h1 {
   display: flex;
   align-items: center;
-  margin-left: 400px;
+  margin-left: 475px;
 }
 
 .navbar-right {
@@ -107,15 +117,9 @@ header h1 {
 }
 
 #favoriteCityBtn {
+  width: 30px;
   height: 30px;
-  text-align: center;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  border-radius: 2px;
-}
-
-#themebtn {
-  height: 30px;
+  font-size: 18px;
   text-align: center;
   background-color: var(--secondary-color);
   color: var(--primary-color);
