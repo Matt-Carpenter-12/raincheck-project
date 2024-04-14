@@ -3,18 +3,18 @@
   --primary-color: #f3f6ec;
   --secondary-color: #59523e;
 
-  --primary-color-transparent:rgba(243, 246, 236, .4);
-  --secondary-color-transparent: rgba(89, 82, 62, .2);
+  --primary-color-transparent: rgba(243, 246, 236, 0.4);
+  --secondary-color-transparent: rgba(89, 82, 62, 0.2);
 
   --bg-pic: url(./Images/sunny-bg.jpg);
 }
 
 .cloudy-theme {
-  --primary-color: #DCE4F2;
-  --seconday-color: #152B59;
+  --primary-color: #dce4f2;
+  --seconday-color: #152b59;
 
-  --primary-color-transparent: rgba(220, 228, 242, .4);
-  --secondary-color-transparent: rgba(21, 43, 89, .2);
+  --primary-color-transparent: rgba(220, 228, 242, 0.4);
+  --secondary-color-transparent: rgba(21, 43, 89, 0.2);
 
   --bg-pic: url(./Images/cloudy-bg.jpg);
 }
@@ -23,8 +23,8 @@
   --primary-color: #e7fbfb;
   --secondary-color: #142423;
 
-  --primary-color-transparent: rgba(231, 251, 251, .4);
-  --secondary-color-transparent: rgba(21, 37, 36, .2);
+  --primary-color-transparent: rgba(231, 251, 251, 0.4);
+  --secondary-color-transparent: rgba(21, 37, 36, 0.2);
 
   --bg-pic: url(./Images/rain-bg.jpg);
 }
@@ -57,9 +57,9 @@
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  border:0;
+  border: 0;
 }
 
 /* main page style */
@@ -83,7 +83,7 @@ header {
   display: flex;
   float: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: baseline;
   width: 100%;
   height: 100px;
   margin-top: 0px;
@@ -93,7 +93,20 @@ header {
   background-position: center;
 }
 
-#themebtn {
+header h1 {
+  display: flex;
+  align-items: center;
+  margin-left: 400px;
+}
+
+.navbar-right {
+  display: flex;
+  margin-left: 280px;
+  margin-right: 20px;
+  padding: 0px;
+}
+
+#favoriteCityBtn {
   height: 30px;
   text-align: center;
   background-color: var(--secondary-color);
@@ -101,7 +114,7 @@ header {
   border-radius: 2px;
 }
 
-button {
+#themebtn {
   height: 30px;
   text-align: center;
   background-color: var(--secondary-color);
@@ -134,7 +147,6 @@ h1 {
   display: none;
 } */
 
-
 /* weather section */
 .weather {
   display: flex;
@@ -165,7 +177,6 @@ h1 {
   font-size: 30px;
 }
 
-
 /* music section */
 .playlist-title {
   text-align: center;
@@ -183,13 +194,12 @@ h1 {
 .song-display-col-1,
 .song-display-col-2,
 .song-display-col-3 {
-  padding-left:40px;
-  padding-right:40px;
-  padding-top:10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
   font-size: 20px;
   background-color: var(--secondary-color-transparent);
 }
-
 
 /*footer */
 footer {
@@ -197,8 +207,6 @@ footer {
   font-size: 14px;
 }
 
-
 /* mobile modifications */
 @media screen and (max-width <=900px) {
- 
 }

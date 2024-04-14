@@ -15,14 +15,11 @@
 <body class="montserrat-400">
     <header id="header-desktop">
         <div>
-            <button id="favoriteCityBtn">Favorite Cities</button> <!--this will take you to your list of fav cities-->
-        </div>
-        <div>
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="themebtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Select Theme
               </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div class="dropdown-menu" aria-labelledby="themebtn">
                 <a class="dropdown-item" href="#">Sunny Theme</a>
                 <a class="dropdown-item" href="#">Cloudy Theme</a>
                 <a class="dropdown-item" href="#">Rainy Theme</a>
@@ -31,10 +28,15 @@
         <!--light and dark versions of the theme it auto picks-->
         </div>
         <h1 class="montserrat-500">RainCheck</h1>
+        <nav class ="navbar navbar-right">
         <form action="">
             <input type="text" id="userCity" placeholder="Search for your city..." name="search">
             <button type="submit" id="submitBtn">search</button>
         </form>
+    </nav>
+    <div>
+        <button id="favoriteCityBtn">Favorite Cities</button> <!--this will take you to your list of fav cities-->
+    </div>
     </header>
     <!-- disregard if doing hamburger menu w/ bootstrap -->
     <!-- <header id="header-mobile">
