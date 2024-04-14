@@ -11,7 +11,7 @@ const playlistColOne = document.querySelector(".song-display-col-1")
 const playlistColTwo = document.querySelector(".song-display-col-2")
 const playlistOne = document.querySelector(".playlist-one")
 const playlistTwo = document.querySelector(".playlist-two")
-const searchPlaylistTitle = "";
+let searchPlaylistTitle = "";
 
 
  const getWeatherData = () => {
@@ -33,14 +33,20 @@ const searchPlaylistTitle = "";
         const currentWeatherId = data.weather[0].id
         if (currentWeatherId >= 200 && currentWeatherId < 600 ) {
             console.log("theme is rainy/thunderstorm/ drizzle")
+            searchPlaylistTitle = "rainy";
           } else if (currentWeatherId >= 600 && currentWeatherId < 700){
              console.log("it's snowing")
+             searchPlaylistTitle = "snowy-day";
           } else if (currentWeatherId >= 701 && currentWeatherId < 781) {
            console.log("unusually dangerous conditions")
+           searchPlaylistTitle ="unusual-weather";
           } else if (currentWeatherId === 800) {
            console.log("clear skies")
+           searchPlaylistTitle = "sunny";
           } else {
            console.log("cloudy days ahead")}
+           searchPlaylistTitle = "cloudy";
+
         
         // Rounds the temperature values
         let mainTemp = Math.floor(Math.round(data.main.temp));
