@@ -217,6 +217,16 @@ form {
   padding-top: 10px;
   font-size: 20px;
   background-color: var(--secondary-color-transparent);
+  
+  /* playlist divs are not shown until the getToken function is called */
+  display: none;
+}
+
+/* styles the embedded playlists */
+iframe {
+  width: 100%;
+  height: 352px;
+  border-radius: 20px;
 }
 
 /*footer */
