@@ -6,7 +6,7 @@ const city = document.querySelector(".current-location");
 const temperature = document.querySelector(".current-temp")
 const weatherDescription = document.querySelector(".current-condition");
 const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
-
+const container = document.querySelector('.container');
 const displayPlaylistOne = document.querySelector(".song-display-col-1")
 const displayPlaylistTwo = document.querySelector(".song-display-col-2")
 const playlistOne = document.querySelector(".playlist-one")
@@ -29,10 +29,13 @@ let searchPlaylistTitle = "";
     fetch(weatherApi)
     .then(response => response.json())
     .then(data => {
-
+         //creates weather id to mark weather conditions
         const currentWeatherId = data.weather[0].id
         console.log(currentWeatherId)
         if (currentWeatherId >= 200 && currentWeatherId < 600 ) {
+            //changes theme in CSS
+            container.classList.remove(':root')
+            container.classList.add('.rainy-theme')
             console.log("theme is rainy/thunderstorm/ drizzle")
             searchPlaylistTitle = "rainy";
 
@@ -65,7 +68,9 @@ let searchPlaylistTitle = "";
            displayPlaylistOne.style.display = 'block';
            displayPlaylistTwo.style.display = 'block';
 
-          } else {
+          } else { //changes theme in CSS
+            container.classList.remove(':root');
+            container.classList.add('.cloudy-theme');
            console.log("cloudy days ahead")
            searchPlaylistTitle = "cloudy";
            getToken(searchPlaylistTitle);
