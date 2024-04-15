@@ -12,7 +12,7 @@ const displayPlaylistTwo = document.querySelector(".song-display-col-2")
 const playlistOne = document.querySelector(".playlist-one")
 const playlistTwo = document.querySelector(".playlist-two")
 let searchPlaylistTitle = "";
-
+const favoritesArray = []
 
  const getWeatherData = () => {
     
@@ -29,6 +29,9 @@ let searchPlaylistTitle = "";
     fetch(weatherApi)
     .then(response => response.json())
     .then(data => {
+favoritesArray.push(cityName)
+localStorage.setItem("favorites", JSON.stringify(favoritesArray))
+console.log("favoritesArray", favoritesArray)
          //creates weather id to mark weather conditions
         const currentWeatherId = data.weather[0].id
         console.log(currentWeatherId)
@@ -92,7 +95,7 @@ let searchPlaylistTitle = "";
         <p>L: ${minTemp}°F | H: ${maxTemp}°F</p>
         `
         weatherDescription.innerHTML = `<p>${data.weather[0].main}</p>`
-
+userCity.value = "" 
         // console.log(data)
     } ).catch (() => {
         console.error();
@@ -168,7 +171,14 @@ function searchForPlaylist(token, search) {
     })
 }
 
-
+function favorites(){
+console.log("favorites clicked...")
+const savedFavs = JSON.parse(localStorage.getItem("favorites"))
+console.log("savedFavs", savedFavs)
+   
+}
+document.addEventListener("DOMContentLoaded", function(){
+    favoriteCity.addEventListener("click", favorites)})
 
 
 
