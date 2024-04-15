@@ -43,8 +43,6 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  margin-left: 195px;
-  margin-right: 75px;
 }
 
 .montserrat-500 {
@@ -89,9 +87,9 @@ body {
 /* navigation style */
 header {
   display: flex;
-  float: center;
-  align-items: center;
-  justify-content: baseline;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
   width: 1110px;
   height: 100px;
   margin-top: 0px;
@@ -114,8 +112,7 @@ header {
 header h1 {
   display: flex;
   align-items: center;
-  margin-left: 200px;
-  font-size: 70px;
+  font-size: 50px;
   color: var(--secondary-color);
 }
 
@@ -127,9 +124,10 @@ form {
 }
 
 .navbar-right {
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
   display: flex;
-  margin-left: 200px;
-  margin-right: 10px;
   padding: 0px;
 }
 
