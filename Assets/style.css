@@ -90,7 +90,6 @@ header {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 1110px;
   height: 100px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -241,6 +240,7 @@ footer {
   font-size: 14px;
 }
 
-/* mobile modifications */
+/* mobile modifications 
 @media screen and (max-width <=900px) {
 }
+*/
