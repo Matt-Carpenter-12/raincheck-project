@@ -37,10 +37,14 @@
 }
 
 .montserrat-400 {
+  display: block;
+  align-content: center;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  margin-left: 195px;
+  margin-right: 75px;
 }
 
 .montserrat-500 {
@@ -68,6 +72,10 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-weight: 10px;
   font-style: normal;
   font-size: 10px;
@@ -84,7 +92,7 @@ header {
   float: center;
   align-items: center;
   justify-content: baseline;
-  width: 100%;
+  width: 1110px;
   height: 100px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -94,7 +102,7 @@ header {
 }
 
 #themebtn {
-  margin-left: 12px;
+  margin-left: 0px;
   height: 30px;
   text-align: center;
   font-size: 17px;
@@ -106,7 +114,7 @@ header {
 header h1 {
   display: flex;
   align-items: center;
-  margin-left: 475px;
+  margin-left: 200px;
   font-size: 70px;
   color: var(--secondary-color);
 }
@@ -120,7 +128,7 @@ form {
 
 .navbar-right {
   display: flex;
-  margin-left: 310px;
+  margin-left: 200px;
   margin-right: 10px;
   padding: 0px;
 }
