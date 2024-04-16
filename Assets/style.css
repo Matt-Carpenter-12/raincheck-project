@@ -18,10 +18,15 @@
 .montserrat-400 {
   display: block;
   align-content: center;
+  justify-content: center;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .montserrat-500 {
@@ -48,7 +53,6 @@ body {
   color: var(--seconday-color);
   background-color: var(--primary-color);
   box-sizing: border-box;
-  margin: 0px;
 }
 
 /* navigation style */
@@ -57,7 +61,6 @@ header {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   height: 100px;
   margin-top: 0px;
   margin-bottom: 0px;
