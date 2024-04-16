@@ -248,7 +248,7 @@ footer {
     position: absolute;
     right: 0;
     top: 0;
-    height: 20vh;
+    height: 10vh;
   }
   .song-display {
     flex-flow: row wrap;
