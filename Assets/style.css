@@ -93,6 +93,14 @@ header h1 {
   color: var(--secondary-color);
 }
 
+nav {
+  margin-top: 15px;
+}
+
+.navbar-nav {
+  margin: 0px;
+}
+
 form {
   display: flex;
   height: 30px;
@@ -132,7 +140,6 @@ form {
   width: 30px;
   height: 30px;
   padding: 4px;
-  margin-bottom: 5px;
   font-size: 10px;
   background-color: var(--secondary-color);
   color: var(--primary-color);
