@@ -59,10 +59,11 @@ const favoritesArray = []
 
 
 function getWeatherID(currentWeatherId) {
+    const root = document.querySelector(':root')
     if (currentWeatherId >= 200 && currentWeatherId < 600 ) {
         //changes theme in CSS
-        container.classList.remove(':root')
-        container.classList.add('.rainy-theme')
+        root.style.setProperty('--bg-pic', 'url(./Images/rain-bg.jpg)')
+        const img = getComputedStyle(root).getPropertyValue('--big-pic');
         console.log("theme is rainy/thunderstorm/ drizzle")
         searchPlaylistTitle = "rainy";
 
@@ -75,12 +76,14 @@ function getWeatherID(currentWeatherId) {
        searchPlaylistTitle ="unusual-weather";
     
       } else if (currentWeatherId === 800) {
+        root.style.setProperty('--bg-pic', 'url(./Images/sunny-bg.jpg)')
+        const img = getComputedStyle(root).getPropertyValue('--big-pic');
        console.log("clear skies")
        searchPlaylistTitle = "sunny";
   
       } else { //changes theme in CSS
-        container.classList.remove(':root');
-        container.classList.add('.cloudy-theme');
+        root.style.setProperty('--bg-pic', 'url(./Images/cloudy-bg.jpg)')
+        const img = getComputedStyle(root).getPropertyValue('--big-pic');
        console.log("cloudy days ahead")
        searchPlaylistTitle = "cloudy";
    
