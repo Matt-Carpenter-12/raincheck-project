@@ -84,7 +84,10 @@ function getWeatherID(currentWeatherId) {
       } else { //changes theme in CSS
         root.style.setProperty('--bg-pic', 'url(./Images/cloudy-bg.jpg)')
         const img = getComputedStyle(root).getPropertyValue('--big-pic');
-       console.log("cloudy days ahead")
+        root.style.setProperty('--primary-color', '#dce4f2')
+        const background = getComputedStyle(root).getPropertyValue('--primary-color');
+        root.style.setProperty('--font-color', '#dce4f2')
+        const font = getComputedStyle(root).getPropertyValue('--font-color');
        searchPlaylistTitle = "cloudy";
    
       }
