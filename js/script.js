@@ -33,56 +33,10 @@ const favoritesArray = []
         localStorage.setItem("favorites", JSON.stringify(favoritesArray))
         console.log("favoritesArray", favoritesArray)
          //creates weather id to mark weather conditions
-         const defaultMode = document.querySelector(':root');
         const currentWeatherId = data.weather[0].id
         console.log(currentWeatherId)
-        if (currentWeatherId >= 200 && currentWeatherId < 600 ) {
-            //changes theme in CSS
-            container.classList.remove(':root')
-            container.classList.add('.rainy-theme')
-            console.log("theme is rainy/thunderstorm/ drizzle")
-            searchPlaylistTitle = "rainy";
 
-            // GetToken funtion is being called with the input of a possible playlist title to be searched
-            getToken(searchPlaylistTitle);
-
-            // Displays the playlists
-            displayPlaylistOne.style.display = 'block';
-            displayPlaylistTwo.style.display = 'block';
-
-
-          } else if (currentWeatherId >= 600 && currentWeatherId < 700){
-             console.log("it's snowing")
-             searchPlaylistTitle = "snowy-day";
-             getToken(searchPlaylistTitle);
-             displayPlaylistOne.style.display = 'block';
-             displayPlaylistTwo.style.display = 'block';
-
-          } else if (currentWeatherId >= 701 && currentWeatherId < 781) {
-           console.log("unusually dangerous conditions")
-           searchPlaylistTitle ="unusual-weather";
-           getToken(searchPlaylistTitle);
-           displayPlaylistOne.style.display = 'block';
-           displayPlaylistTwo.style.display = 'block';
-
-          } else if (currentWeatherId === 800) {
-           console.log("clear skies")
-           searchPlaylistTitle = "sunny";
-           getToken(searchPlaylistTitle);
-           displayPlaylistOne.style.display = 'block';
-           displayPlaylistTwo.style.display = 'block';
-
-          } else { //changes theme in CSS
-            container.classList.remove(':root');
-            container.classList.add('.cloudy-theme');
-           console.log("cloudy days ahead")
-           searchPlaylistTitle = "cloudy";
-           getToken(searchPlaylistTitle);
-           displayPlaylistOne.style.display = 'block';
-           displayPlaylistTwo.style.display = 'block';
-          }
-
-
+        getWeatherID(currentWeatherId);
         
         // Rounds the temperature values
         let mainTemp = Math.floor(Math.round(data.main.temp));
