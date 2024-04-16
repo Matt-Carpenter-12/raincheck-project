@@ -214,11 +214,10 @@ form {
 
 .song-display {
   display: flex;
-  flex-direction: column;
+  flex-shrink: 0;
   align-items: center;
   justify-content: space-around;
   padding: 5%;
-  /* display: none; */
 }
 
 .song-display-col-1,
@@ -242,7 +241,15 @@ footer {
   font-size: 14px;
 }
 
-/* mobile modifications 
-@media screen and (max-width <=900px) {
+/* mobile modifications  */
+@media screen and (max-width:780px) {
+  .song-display {
+    flex-flow: row wrap;
+  }
+
+  .song-display-col-1,
+  .song-display-col-2 {
+    padding-top: 30px;
+  }
 }
-*/
+
