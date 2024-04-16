@@ -21,7 +21,7 @@
 
 .rainy-theme {
   --primary-color: #e7fbfb;
-  --secondary-color: #142423;
+  --font-color: #142423;
 
   --primary-color-transparent: rgba(231, 251, 251, 0.4);
   --secondary-color-transparent: rgba(21, 37, 36, 0.2);

@@ -64,20 +64,23 @@ function getWeatherID(currentWeatherId) {
         //changes theme in CSS
         root.style.setProperty('--bg-pic', 'url(./Images/rain-bg.jpg)')
         const img = getComputedStyle(root).getPropertyValue('--big-pic');
-        console.log("theme is rainy/thunderstorm/ drizzle")
+        root.style.setProperty('--primary-color', '#e7fbfb')
+        const background = getComputedStyle(root).getPropertyValue('--primary-color');
+        root.style.setProperty('--font-color', '#142423')
+        const font = getComputedStyle(root).getPropertyValue('--font-color');
         searchPlaylistTitle = "rainy";
 
       } else if (currentWeatherId >= 600 && currentWeatherId < 700){
-         console.log("it's snowing")
          searchPlaylistTitle = "snowy-day";
        
       } else if (currentWeatherId >= 701 && currentWeatherId < 781) {
-       console.log("unusually dangerous conditions")
        searchPlaylistTitle ="unusual-weather";
     
       } else if (currentWeatherId === 800) {
         root.style.setProperty('--bg-pic', 'url(./Images/sunny-bg.jpg)')
         const img = getComputedStyle(root).getPropertyValue('--big-pic');
+        root.style.setProperty('--primary-color', '#f3f6ec')
+        const background = getComputedStyle(root).getPropertyValue('--primary-color');
        console.log("clear skies")
        searchPlaylistTitle = "sunny";
   
@@ -86,7 +89,7 @@ function getWeatherID(currentWeatherId) {
         const img = getComputedStyle(root).getPropertyValue('--big-pic');
         root.style.setProperty('--primary-color', '#dce4f2')
         const background = getComputedStyle(root).getPropertyValue('--primary-color');
-        root.style.setProperty('--font-color', '#dce4f2')
+        root.style.setProperty('--font-color', '#152b59')
         const font = getComputedStyle(root).getPropertyValue('--font-color');
        searchPlaylistTitle = "cloudy";
    
