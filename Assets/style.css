@@ -11,7 +11,7 @@
 
 .cloudy-theme {
   --primary-color: #dce4f2;
-  --seconday-color: #152b59;
+  --font-color: #152b59;
 
   --primary-color-transparent: rgba(220, 228, 242, 0.4);
   --secondary-color-transparent: rgba(21, 43, 89, 0.2);
