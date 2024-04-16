@@ -175,6 +175,7 @@ form {
   display: flex;
   text-align: center;
   justify-content: center;
+  align-items: center;
   font-size: 20px;
   height: 450px;
   margin-left: 1%;
@@ -187,13 +188,12 @@ form {
   background-color: var(--primary-color-transparent);
   margin: 5%;
   text-align: center;
-  height: 60%;
-  width: 50%;
+  padding: 20px;
 }
 
 .current-location {
   font-size: 40px;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .current-temp {
@@ -201,7 +201,6 @@ form {
 }
 
 /* music section */
-
 /* playlists are not shown until the getToken function is called */
 .music {
   display: none;
@@ -215,6 +214,7 @@ form {
 
 .song-display {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding: 5%;
@@ -222,8 +222,7 @@ form {
 }
 
 .song-display-col-1,
-.song-display-col-2,
-.song-display-col-3 {
+.song-display-col-2, {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 10px;
