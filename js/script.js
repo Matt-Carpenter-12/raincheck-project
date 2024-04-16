@@ -9,9 +9,6 @@ const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
 const container = document.querySelector('.container');
 
 const musicSection = document.querySelector(".music")
-const songDisplay = document.querySelector(".song-display")
-const displayPlaylistOne = document.querySelector(".song-display-col-1")
-const displayPlaylistTwo = document.querySelector(".song-display-col-2")
 const playlistOne = document.querySelector(".playlist-one")
 const playlistTwo = document.querySelector(".playlist-two")
 let searchPlaylistTitle = "";
@@ -150,10 +147,7 @@ function searchForPlaylist(token, search) {
         }
 
         const playlistOneId = data.playlists.items[randomNumOne].id;
-
         const playlistTwoId = data.playlists.items[randomNumTwo].id;
-
-       
 
         // Src for the embedded playlists are added to index.html
         playlistOne.setAttribute("src", `https://open.spotify.com/embed/playlist/${playlistOneId}`)
@@ -161,7 +155,6 @@ function searchForPlaylist(token, search) {
         
         // Displays the playlist section
         musicSection.style.display = 'block';
-        
 
     }).catch (() => {
         console.error
