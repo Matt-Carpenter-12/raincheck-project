@@ -15,87 +15,53 @@
 
 <body class="montserrat-400 container">
     <header id="header-desktop">
-        <div>
-            <div class="dropdown">
-                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="themebtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="bi bi-palette2"></i>
-                  </button>
-              <div class="dropdown-menu" aria-labelledby="themebtn">
-                <a class="dropdown-item" href="#">Sunny Theme</a>
-                <a class="dropdown-item" href="#">Cloudy Theme</a>
-                <a class="dropdown-item" href="#">Rainy Theme</a>
-              </div>
-            </div>
+        <h1 class="montserrat-500">RainCheck</h1>
+        <nav>
+            <nav class="navbar navbar-expand-lg navbar-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <form action="" class="navbar-nav">
+                        <input type="text" id="userCity" placeholder="Search for your city..." name="search">
+                        <button type="submit" id="submitBtn"><i class="bi bi-search"></i></button>
+                    </form>  
+                    <button id="favoriteCityBtn"><i class="bi bi-bookmark-heart"></i></button>
+                    <div class="dropdown">
+                      <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="themebtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="bi bi-palette2"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="themebtn">
+                        <a class="dropdown-item" href="#">Sunny Theme</a>
+                        <a class="dropdown-item" href="#">Cloudy Theme</a>
+                        <a class="dropdown-item" href="#">Rainy Theme</a>
+                      </div>
+                    </div>
+                </div>
+              </nav>
         <!--light and dark versions of the theme it auto picks-->
         </div>
-        <h1 class="montserrat-500">RainCheck</h1>
-        <nav class ="navbar navbar-right">
-        <form action="">
-            <input type="text" id="userCity" placeholder="Search for your city..." name="search">
-            <button type="submit" id="submitBtn"><i class="bi bi-search"></i> </button>
-        </form>
-    </nav>
-    <div>
-        <button id="favoriteCityBtn"><i class="bi bi-bookmark-heart"></i> </button> <!--this will take you to your list of fav cities-->
-    </div>
     </header>
-    <!-- disregard if doing hamburger menu w/ bootstrap -->
-    <!-- <header id="header-mobile">
-        <div>
-            <h1 class="montserrat-500 title-mobile">RainCheck</h1>
-        </div>
-        <div>
-            <button class="mobile-nav-toggle"><span class="visually-hidden">Menu</span></button>
-            <img class="icon-hamburger" src="./Assets/icons/menu-icon.png" alt="menu hamburger">
-            <img class="icon-close" src="./Assets/icons/close-menu.png" alt="close menu">
-        </div>
-    </header> -->
     <main>
         <!--weather section-->
         <div class="weather">
             <div class="current-weather">
-                <div class="current-location">Example, Location</div>
-                <div class="current-temp">temp</div>
-                <div class="current-condition">weather</div>
+                <h2 class="current-location">Welcome to RainCheck</h2>
+                <div class="current-temp">Enter your city to get started</div>
+                <div class="current-condition"></div>
             </div>
             <div>
-                <!--on mobile: either only include as many will fit, or make a scrolling carousel-->
-                <!-- <div>
-                    <p>day</p>
-                    <p>icon</p>
-                    <p>temp</p>
-                    <p>weather</p>
-                </div>
-                <div>
-                    <p>day</p>
-                    <p>icon</p>
-                    <p>temp</p>
-                    <p>weather</p>
-                </div>
-                <div>
-                    <p>day</p>
-                    <p>icon</p>
-                    <p>temp</p>
-                    <p>weather</p>
-                </div> -->
             </div>
         </div>
         <!--music section-->
         <div class="music">
-            <h2 class="playlist-title">Suggested Playlist</h2>
+            <h2 class="playlist-title">Suggested Playlists</h2>
             <div class="song-display">
                 <div class="song-display-col-1">
                     <iframe class="playlist-one" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" ></iframe>                    
                 </div>
                 <div class="song-display-col-2">
                     <iframe class="playlist-two" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" ></iframe>
-                </div>
-                <div class="song-display-col-3">
-                    <p>song from the playlist</p>
-                    <p>song from the playlist</p>
-                    <p>song from the playlist</p>
-                    <p>song from the playlist</p>
-                    <p>song from the playlist</p>
                 </div>
             </div>
         </div>

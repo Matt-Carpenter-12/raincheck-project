@@ -52,18 +52,6 @@
   font-style: normal;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 /* main page style */
 * {
   box-sizing: border-box;
@@ -89,23 +77,13 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 100px;
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 20px;
   background-color: var(--primary-color);
   background-position: center;
-}
-
-#themebtn {
-  margin-left: 0px;
-  height: 30px;
-  text-align: center;
-  font-size: 17px;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  border-radius: 2px;
 }
 
 header h1 {
@@ -116,10 +94,10 @@ header h1 {
 }
 
 form {
-  font-size: 12px;
-  padding-top: 3px;
-  width: 200px;
+  display: flex;
   height: 30px;
+  font-size: 12px;
+  margin-top: 30px;
 }
 
 .navbar-right {
@@ -132,7 +110,7 @@ form {
 
 #submitBtn {
   width: 25px;
-  height: 25px;
+  height: 30px;
   font-size: 12px;
   text-align: center;
   background-color: var(--secondary-color);
@@ -141,40 +119,32 @@ form {
 }
 
 #favoriteCityBtn {
-  width: 30px;
+  width: 25px;
   height: 30px;
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   border-radius: 2px;
 }
 
-/* LAUREN: disregard this if you're doing bootstrap for the hamburger menu*/
-/* .title-mobile {
-  font-size: 50px;
+#themebtn {
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  margin-bottom: 5px;
+  font-size: 10px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 4px2
 }
-
-.icon-hamburger,
-.icon-close {
-  height: 40px;
-  width: 40px;
-}
-
-.menu-nav-toggle{
-  cursor: pointer;
-}
-
-.menu-nav-toggle,
-.icon-close {
-  display: none;
-} */
 
 /* weather section */
 .weather {
   display: flex;
   text-align: center;
   justify-content: center;
+  align-items: center;
   font-size: 20px;
   height: 450px;
   margin-left: 1%;
@@ -187,13 +157,12 @@ form {
   background-color: var(--primary-color-transparent);
   margin: 5%;
   text-align: center;
-  height: 60%;
-  width: 50%;
+  padding: 20px;
 }
 
 .current-location {
   font-size: 40px;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .current-temp {
@@ -201,6 +170,11 @@ form {
 }
 
 /* music section */
+/* playlists are not shown until the getToken function is called */
+.music {
+  display: none;
+}
+
 .playlist-title {
   text-align: center;
   font-size: 45px;
@@ -209,22 +183,18 @@ form {
 
 .song-display {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: space-around;
   padding: 5%;
 }
 
 .song-display-col-1,
-.song-display-col-2,
-.song-display-col-3 {
+.song-display-col-2 {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 10px;
   font-size: 20px;
-  background-color: var(--secondary-color-transparent);
-  
-  /* playlist divs are not shown until the getToken function is called */
-  display: none;
 }
 
 /* styles the embedded playlists */
@@ -240,7 +210,23 @@ footer {
   font-size: 14px;
 }
 
-/* mobile modifications 
-@media screen and (max-width <=900px) {
+/* mobile modifications  */
+@media screen and (max-width:780px) {
+  nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 10vh;
+  }
+  
+  .song-display {
+    flex-flow: row wrap;
+  }
+
+  .song-display-col-1,
+  .song-display-col-2 {
+    padding-top: 30px;
+  }
+
 }
-*/
+
