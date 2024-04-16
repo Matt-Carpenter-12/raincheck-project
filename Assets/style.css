@@ -4,29 +4,8 @@
   --secondary-color: #59523e;
 
   --primary-color-transparent: rgba(243, 246, 236, 0.4);
-  --secondary-color-transparent: rgba(89, 82, 62, 0.2);
 
   --bg-pic: url(./Images/sunny-bg.jpg);
-}
-
-.cloudy-theme {
-  --primary-color: #dce4f2;
-  --font-color: #152b59;
-
-  --primary-color-transparent: rgba(220, 228, 242, 0.4);
-  --secondary-color-transparent: rgba(21, 43, 89, 0.2);
-
-  --bg-pic: url(./Images/cloudy-bg.jpg);
-}
-
-.rainy-theme {
-  --primary-color: #e7fbfb;
-  --font-color: #142423;
-
-  --primary-color-transparent: rgba(231, 251, 251, 0.4);
-  --secondary-color-transparent: rgba(21, 37, 36, 0.2);
-
-  --bg-pic: url(./Images/rain-bg.jpg);
 }
 
 .montserrat-300 {
