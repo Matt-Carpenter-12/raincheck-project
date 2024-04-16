@@ -66,8 +66,6 @@ function getWeatherID(currentWeatherId) {
         const img = getComputedStyle(root).getPropertyValue('--big-pic');
         root.style.setProperty('--primary-color', '#e7fbfb')
         const background = getComputedStyle(root).getPropertyValue('--primary-color');
-        root.style.setProperty('--font-color', '#142423')
-        const font = getComputedStyle(root).getPropertyValue('--font-color');
         searchPlaylistTitle = "rainy";
 
       } else if (currentWeatherId >= 600 && currentWeatherId < 700){
@@ -81,7 +79,6 @@ function getWeatherID(currentWeatherId) {
         const img = getComputedStyle(root).getPropertyValue('--big-pic');
         root.style.setProperty('--primary-color', '#f3f6ec')
         const background = getComputedStyle(root).getPropertyValue('--primary-color');
-       console.log("clear skies")
        searchPlaylistTitle = "sunny";
   
       } else { //changes theme in CSS
@@ -89,8 +86,6 @@ function getWeatherID(currentWeatherId) {
         const img = getComputedStyle(root).getPropertyValue('--big-pic');
         root.style.setProperty('--primary-color', '#dce4f2')
         const background = getComputedStyle(root).getPropertyValue('--primary-color');
-        root.style.setProperty('--font-color', '#152b59')
-        const font = getComputedStyle(root).getPropertyValue('--font-color');
        searchPlaylistTitle = "cloudy";
    
       }
