@@ -201,6 +201,12 @@ form {
 }
 
 /* music section */
+
+/* playlists are not shown until the getToken function is called */
+.music {
+  display: none;
+}
+
 .playlist-title {
   text-align: center;
   font-size: 45px;
@@ -212,6 +218,7 @@ form {
   align-items: center;
   justify-content: space-around;
   padding: 5%;
+  /* display: none; */
 }
 
 .song-display-col-1,
@@ -221,10 +228,6 @@ form {
   padding-right: 40px;
   padding-top: 10px;
   font-size: 20px;
-  background-color: var(--secondary-color-transparent);
-  
-  /* playlist divs are not shown until the getToken function is called */
-  display: none;
 }
 
 /* styles the embedded playlists */

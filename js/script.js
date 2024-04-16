@@ -7,6 +7,9 @@ const temperature = document.querySelector(".current-temp")
 const weatherDescription = document.querySelector(".current-condition");
 const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
 const container = document.querySelector('.container');
+
+const musicSection = document.querySelector(".music")
+const songDisplay = document.querySelector(".song-display")
 const displayPlaylistOne = document.querySelector(".song-display-col-1")
 const displayPlaylistTwo = document.querySelector(".song-display-col-2")
 const playlistOne = document.querySelector(".playlist-one")
@@ -29,59 +32,14 @@ const favoritesArray = []
     fetch(weatherApi)
     .then(response => response.json())
     .then(data => {
-favoritesArray.push(cityName)
-localStorage.setItem("favorites", JSON.stringify(favoritesArray))
-console.log("favoritesArray", favoritesArray)
+        favoritesArray.push(cityName)
+        localStorage.setItem("favorites", JSON.stringify(favoritesArray))
+        console.log("favoritesArray", favoritesArray)
          //creates weather id to mark weather conditions
         const currentWeatherId = data.weather[0].id
         console.log(currentWeatherId)
-        if (currentWeatherId >= 200 && currentWeatherId < 600 ) {
-            //changes theme in CSS
-            container.classList.remove(':root')
-            container.classList.add('.rainy-theme')
-            console.log("theme is rainy/thunderstorm/ drizzle")
-            searchPlaylistTitle = "rainy";
 
-            // GetToken funtion is being called with the input of a possible playlist title to be searched
-            getToken(searchPlaylistTitle);
-
-            // Displays the playlists
-            displayPlaylistOne.style.display = 'block';
-            displayPlaylistTwo.style.display = 'block';
-
-
-          } else if (currentWeatherId >= 600 && currentWeatherId < 700){
-             console.log("it's snowing")
-             searchPlaylistTitle = "snowy-day";
-             getToken(searchPlaylistTitle);
-             displayPlaylistOne.style.display = 'block';
-             displayPlaylistTwo.style.display = 'block';
-
-          } else if (currentWeatherId >= 701 && currentWeatherId < 781) {
-           console.log("unusually dangerous conditions")
-           searchPlaylistTitle ="unusual-weather";
-           getToken(searchPlaylistTitle);
-           displayPlaylistOne.style.display = 'block';
-           displayPlaylistTwo.style.display = 'block';
-
-          } else if (currentWeatherId === 800) {
-           console.log("clear skies")
-           searchPlaylistTitle = "sunny";
-           getToken(searchPlaylistTitle);
-           displayPlaylistOne.style.display = 'block';
-           displayPlaylistTwo.style.display = 'block';
-
-          } else { //changes theme in CSS
-            container.classList.remove(':root');
-            container.classList.add('.cloudy-theme');
-           console.log("cloudy days ahead")
-           searchPlaylistTitle = "cloudy";
-           getToken(searchPlaylistTitle);
-           displayPlaylistOne.style.display = 'block';
-           displayPlaylistTwo.style.display = 'block';
-          }
-
-
+        getWeatherID(currentWeatherId);
         
         // Rounds the temperature values
         let mainTemp = Math.floor(Math.round(data.main.temp));
@@ -95,12 +53,44 @@ console.log("favoritesArray", favoritesArray)
         <p>L: ${minTemp}°F | H: ${maxTemp}°F</p>
         `
         weatherDescription.innerHTML = `<p>${data.weather[0].main}</p>`
-userCity.value = "" 
+        userCity.value = "" 
         // console.log(data)
     } ).catch (() => {
         console.error();
     })
  }
+
+
+function getWeatherID(currentWeatherId) {
+    if (currentWeatherId >= 200 && currentWeatherId < 600 ) {
+        //changes theme in CSS
+        container.classList.remove(':root')
+        container.classList.add('.rainy-theme')
+        console.log("theme is rainy/thunderstorm/ drizzle")
+        searchPlaylistTitle = "rainy";
+
+      } else if (currentWeatherId >= 600 && currentWeatherId < 700){
+         console.log("it's snowing")
+         searchPlaylistTitle = "snowy-day";
+       
+      } else if (currentWeatherId >= 701 && currentWeatherId < 781) {
+       console.log("unusually dangerous conditions")
+       searchPlaylistTitle ="unusual-weather";
+    
+      } else if (currentWeatherId === 800) {
+       console.log("clear skies")
+       searchPlaylistTitle = "sunny";
+  
+      } else { //changes theme in CSS
+        container.classList.remove(':root');
+        container.classList.add('.cloudy-theme');
+       console.log("cloudy days ahead")
+       searchPlaylistTitle = "cloudy";
+   
+      }
+    // GetToken funtion is being called with the input of a possible playlist title to be searched
+    getToken(searchPlaylistTitle)
+}
 
 //  Event Listener for the submit and it invokes the getWeatherData function
  submit.addEventListener("click", event => {
@@ -111,6 +101,7 @@ userCity.value = ""
 
 // Function to get the Spotify access token to be used with an API call for a playlist 
 function getToken(searchPlaylistTitle) {
+
     const clientId = 'adda26d9e1f84220ae4acd844e4516f3';
     const clientSecret = '61627fc566894be5bf4cf0176b120df7';
 
@@ -162,9 +153,15 @@ function searchForPlaylist(token, search) {
 
         const playlistTwoId = data.playlists.items[randomNumTwo].id;
 
+       
+
         // Src for the embedded playlists are added to index.html
         playlistOne.setAttribute("src", `https://open.spotify.com/embed/playlist/${playlistOneId}`)
         playlistTwo.setAttribute("src", `https://open.spotify.com/embed/playlist/${playlistTwoId}`)
+        
+        // Displays the playlist section
+        musicSection.style.display = 'block';
+        
 
     }).catch (() => {
         console.error
