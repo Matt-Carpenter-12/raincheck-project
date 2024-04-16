@@ -78,6 +78,7 @@ header {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   height: 100px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -99,6 +100,7 @@ form {
   font-size: 12px;
   margin-top: 30px;
 }
+
 
 .navbar-right {
   flex-wrap: wrap;
@@ -218,7 +220,7 @@ footer {
     top: 0;
     height: 10vh;
   }
-  
+
   .song-display {
     flex-flow: row wrap;
   }
