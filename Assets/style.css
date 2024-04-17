@@ -170,7 +170,8 @@ form {
 }
 
 .song-display-col-1,
-.song-display-col-2 {
+.song-display-col-2, 
+.song-display-col-3 {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 10px;
@@ -226,7 +227,8 @@ input {
   }
 
   .song-display-col-1,
-  .song-display-col-2 {
+  .song-display-col-2, 
+  .song-display-col-3 {
     padding-top: 30px;
   }
 

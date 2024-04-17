@@ -34,7 +34,6 @@ const favoritesArray = []
         console.log("favoritesArray", favoritesArray)
          //creates weather id to mark weather conditions
         const currentWeatherId = data.weather[0].id
-        console.log(currentWeatherId)
 
         getWeatherID(currentWeatherId);
         
@@ -133,7 +132,8 @@ function getToken(searchPlaylistTitle) {
 
 // Function takes the input of the token to make an API call and the input of a search value for the playlist
 function searchForPlaylist(token, search) {
-    const playlistUrl = `https://api.spotify.com/v1/search?q=${search}&type=playlist&limit=10&offset=0`;
+    const playlistThree = document.querySelector(".playlist-three")
+    const playlistUrl = `https://api.spotify.com/v1/search?q=${search}&type=playlist&limit=50&offset=0`;
 
     const options = {
         method: 'GET',
@@ -146,21 +146,25 @@ function searchForPlaylist(token, search) {
     .then(data => {
 
         // Selects a random playlist index
-        let randomNumOne = Math.floor(Math.random() * 10);
-        let randomNumTwo = Math.floor(Math.random() * 10);
+        let randomNumOne = Math.floor(Math.random() * 50);
+        let randomNumTwo = Math.floor(Math.random() * 50);
+        let randomNumThree = Math.floor(Math.random() * 50);
+
 
         // Makes sure the same two playlists are not shown
-        if (randomNumTwo === randomNumOne) {
-            randomNumTwo = Math.floor(Math.random() * 10);
+        if (randomNumTwo === randomNumOne || randomNumOne === randomNumThree) {
+            randomNumTwo = Math.floor(Math.random() * 50);
         }
 
         const playlistOneId = data.playlists.items[randomNumOne].id;
         const playlistTwoId = data.playlists.items[randomNumTwo].id;
+        const playlistThreeId = data.playlists.items[randomNumThree].id;
 
         // Src for the embedded playlists are added to index.html
         playlistOne.setAttribute("src", `https://open.spotify.com/embed/playlist/${playlistOneId}`)
         playlistTwo.setAttribute("src", `https://open.spotify.com/embed/playlist/${playlistTwoId}`)
-        
+        playlistThree.setAttribute("src", `https://open.spotify.com/embed/playlist/${playlistThreeId}`)
+
         // Displays the playlist section
         musicSection.style.display = 'block';
 
@@ -170,9 +174,9 @@ function searchForPlaylist(token, search) {
 }
 
 function favorites(){
-console.log("favorites clicked...")
-const savedFavs = JSON.parse(localStorage.getItem("favorites"))
-console.log("savedFavs", savedFavs)
+    console.log("favorites clicked...")
+    const savedFavs = JSON.parse(localStorage.getItem("favorites"))
+    console.log("savedFavs", savedFavs)
    
 }
 document.addEventListener("DOMContentLoaded", function(){
