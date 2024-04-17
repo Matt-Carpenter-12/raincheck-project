@@ -110,13 +110,18 @@ form {
 }
 
 #favoriteCityBtn {
-  width: 25px;
+  width: 45px;
   height: 30px;
   font-size: 12px;
   text-align: center;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   border-radius: 2px;
+}
+
+.dropdown-menu {
+  right: 0;
+  left: auto;
 }
 
 /* weather section */

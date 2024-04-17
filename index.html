@@ -22,7 +22,16 @@
                   <form action="" class="navbar-nav">
                     <input type="text" id="userCity" placeholder="Search for your city..." name="search">
                     <button type="submit" id="submitBtn"><i class="bi bi-search"></i></button>
-                    <button id="favoriteCityBtn"><i class="bi bi-bookmark-heart"></i></button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" id="favoriteCityBtn" type="button" data-toggle="dropdown" aria-expanded="false">
+                          <i class="bi bi-bookmark-heart"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Placeholder 1</a></li>
+                          <li><a class="dropdown-item" href="#">Placeholder 2</a></li>
+                          <li><a class="dropdown-item" href="#">Placeholder 3</a></li>
+                        </ul>
+                      </div>
                   </form>
                 </div>
               </nav>
