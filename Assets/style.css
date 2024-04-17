@@ -211,10 +211,17 @@ footer {
   nav {
     display: inline-flex;
     flex-direction: column;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: 200px;
+    height: 100px;
+    margin-top: 0px;
   }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+input {
+  width: 250px;
+}
 
   .song-display {
     flex-flow: row wrap;
