@@ -188,17 +188,14 @@ iframe {
 /*footer */
 footer {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 8%;
   font-size: 14px;
 }
 
 /* mobile modifications  */
 @media screen and (max-width:780px) {
   nav {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 10vh;
+  
   }
 
   .song-display {
@@ -210,5 +207,8 @@ footer {
     padding-top: 30px;
   }
 
+  footer {
+    margin-bottom: 0px;
+  }
 }
 
