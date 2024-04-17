@@ -1,14 +1,14 @@
 /* utility classes */
 :root {
+/* Bethany's code */
   --primary-color: #f3f6ec;
   --secondary-color: black;
-
   --primary-color-transparent: rgba(243, 246, 236, 0.4);
-
   --bg-pic: url(./Images/sunny-bg.jpg);
 }
 
 .montserrat-300 {
+/* Bethany's code */
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -16,6 +16,7 @@
 }
 
 .montserrat-400 {
+/* Bethany's code */
   display: block;
   align-content: center;
   justify-content: center;
@@ -30,6 +31,7 @@
 }
 
 .montserrat-500 {
+/* Bethany's code */
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -38,10 +40,12 @@
 
 /* main page style */
 * {
+/* Bethany's code */
   box-sizing: border-box;
 }
 
 body {
+/* Lauren's code */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,6 +54,7 @@ body {
   font-style: normal;
   font-size: 10px;
   line-height: 1.5;
+/* Bethany's code */
   color: var(--seconday-color);
   background-color: var(--primary-color);
   box-sizing: border-box;
@@ -57,6 +62,7 @@ body {
 
 /* navigation style */
 header {
+/* Lauren's code */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -65,26 +71,32 @@ header {
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 20px;
+/* Bethany's code */
   background-color: var(--primary-color);
   background-position: center;
 }
 
 header h1 {
+/* Lauren's code */
   display: flex;
   align-items: center;
   font-size: 50px;
+/* Bethany's code */
   color: var(--secondary-color);
 }
 
 nav {
+/* Lauren's code */
   margin-top: 15px;
 }
 
 .navbar-nav {
+/* Lauren's code */
   margin: 0px;
 }
 
 form {
+/* Lauren's code */
   display: flex;
   height: 30px;
   font-size: 12px;
@@ -92,6 +104,7 @@ form {
 }
 
 .navbar-right {
+/* Lauren's code */
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
@@ -100,32 +113,38 @@ form {
 }
 
 #submitBtn {
+/* Lauren's code */
   width: 25px;
   height: 30px;
   font-size: 12px;
   text-align: center;
+/* Bethany's code */
   background-color: var(--secondary-color);
   color: var(--primary-color);
   border-radius: 2px;
 }
 
 #favoriteCityBtn {
+/* Lauren's code */
   width: 45px;
   height: 30px;
   font-size: 12px;
   text-align: center;
+/* Bethany's code */
   background-color: var(--secondary-color);
   color: var(--primary-color);
   border-radius: 2px;
 }
 
 .dropdown-menu {
+/* Lauren's code */
   right: 0;
   left: auto;
 }
 
 /* weather section */
 .weather {
+/* Bethany's code */
   display: flex;
   text-align: center;
   justify-content: center;
@@ -139,6 +158,7 @@ form {
 }
 
 .current-weather {
+/* Bethany's code */
   background-color: var(--primary-color-transparent);
   margin: 5%;
   text-align: center;
@@ -146,27 +166,32 @@ form {
 }
 
 .current-location {
+/* Bethany's code */
   font-size: 40px;
   padding: 20px;
 }
 
 .current-temp {
+/* Bethany's code */
   font-size: 30px;
 }
 
 /* music section */
 /* playlists are not shown until the getToken function is called */
 .music {
+/* Bethany's code */
   display: none;
 }
 
 .playlist-title {
+/* Bethany's code */
   text-align: center;
   font-size: 45px;
   margin-top: 5%;
 }
 
 .song-display {
+/* Bethany's code */
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -177,6 +202,7 @@ form {
 .song-display-col-1,
 .song-display-col-2, 
 .song-display-col-3 {
+/* Bethany's code */
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 10px;
@@ -185,6 +211,7 @@ form {
 
 /* styles the embedded playlists */
 iframe {
+/* Bethany's code */
   width: 100%;
   height: 352px;
   border-radius: 20px;
@@ -192,14 +219,17 @@ iframe {
 
 /*footer */
 footer {
+/* Lauren's code */
   text-align: center;
   margin-top: 8%;
+/* Bethany's code */
   font-size: 14px;
 }
 
 /* mobile modifications  */
 @media screen and (max-width:780px) {
   header {
+/* Lauren's code */
     display: inline-flex;
     flex-direction: column;
     width: 100%;
@@ -207,12 +237,14 @@ footer {
   }
 
   header h1 {
+/* Lauren's code */
     display: inline-flex;
     flex-direction: column;
     width: 100%;
     height: 20%;
   }
   nav {
+/* Lauren's code */
     display: inline-flex;
     flex-direction: column;
     height: 100px;
@@ -220,24 +252,29 @@ footer {
   }
 
   .navbar-nav {
+/* Lauren's code */
     flex-direction: row;
   }
 
 input {
+/* Lauren's code */
   width: 250px;
 }
 
   .song-display {
+/* Bethany's code */
     flex-flow: row wrap;
   }
 
   .song-display-col-1,
   .song-display-col-2, 
   .song-display-col-3 {
+/* Bethany's code */
     padding-top: 30px;
   }
 
-  footer {
+footer {
+/* Lauren's code */
     margin-bottom: 0px;
   }
 }
