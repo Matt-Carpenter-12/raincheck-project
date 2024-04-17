@@ -5,14 +5,15 @@ const userCity = document.querySelector("#userCity");
 const city = document.querySelector(".current-location");
 const temperature = document.querySelector(".current-temp")
 const weatherDescription = document.querySelector(".current-condition");
-const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373'
+const weatherApiKey = 'fe330accdd6c57ffe4bd2ac73c28c373';
 const container = document.querySelector('.container');
 
-const musicSection = document.querySelector(".music")
-const playlistOne = document.querySelector(".playlist-one")
-const playlistTwo = document.querySelector(".playlist-two")
+const musicSection = document.querySelector(".music");
+const playlistOne = document.querySelector(".playlist-one");
+const playlistTwo = document.querySelector(".playlist-two");
+const playlistThree = document.querySelector(".playlist-three");
 let searchPlaylistTitle = "";
-const favoritesArray = []
+const favoritesArray = [];
 
  const getWeatherData = () => {
     
@@ -132,7 +133,7 @@ function getToken(searchPlaylistTitle) {
 
 // Function takes the input of the token to make an API call and the input of a search value for the playlist
 function searchForPlaylist(token, search) {
-    const playlistThree = document.querySelector(".playlist-three")
+    
     const playlistUrl = `https://api.spotify.com/v1/search?q=${search}&type=playlist&limit=50&offset=0`;
 
     const options = {
