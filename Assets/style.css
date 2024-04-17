@@ -1,7 +1,7 @@
 /* utility classes */
 :root {
   --primary-color: #f3f6ec;
-  --secondary-color: #59523e;
+  --secondary-color: black;
 
   --primary-color-transparent: rgba(243, 246, 236, 0.4);
 
@@ -90,7 +90,6 @@ form {
   font-size: 12px;
   margin-top: 30px;
 }
-
 
 .navbar-right {
   flex-wrap: wrap;
@@ -194,7 +193,6 @@ footer {
 
 /* mobile modifications  */
 @media screen and (max-width:780px) {
-
   header {
     display: inline-flex;
     flex-direction: column;
