@@ -69,6 +69,8 @@ function getWeatherID(currentWeatherId) {
         searchPlaylistTitle = "rainy";
 
       } else if (currentWeatherId >= 600 && currentWeatherId < 700){
+        root.style.setProperty('--bg-pic', 'url(./Images/snow-bg.jpg)')
+        const img = getComputedStyle(root).getPropertyValue('--big-pic');
         root.style.setProperty('--primary-color', '#e7eaef')
         const background = getComputedStyle(root).getPropertyValue('--primary-color');
          searchPlaylistTitle = "snowy-day";
