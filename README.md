@@ -15,11 +15,17 @@ To get the most out of RainCheck, start by entering your city, or selecting a pr
 ## Credits
 
 Collaborators on this project:
-Saydeez Reyes (Saydeezr on GitHub)
-Marly Valcin (MarlyV1 on GitHub)
-Lauren Scarborough (lauren6198 on GitHub)
-Bethany Proctor (BethanyProctor on GitHub)
-Matt Carpenter (Matt-Carpenter-12 on GitHub)
+
+<a href="https://github.com/Saydeezr">Saydeez Reyes</a>
+
+<a href="https://github.com/MarlyV1">Marly Valcin</a>
+
+<a href="https://github.com/lauren6198">Lauren Scarborough</a>
+
+<a href="https://github.com/BethanyProctor">Bethany Proctor</a>
+
+<a href="https://github.com/Matt-Carpenter-12">Matt Carpenter</a>
+
 
 Pictures used for this project:
 Rain: Photo by Inge Maria on Unsplash
@@ -28,3 +34,10 @@ Snow: Photo by Erol Ahmed on Unsplash
 Clouds: Photo by Zbynek Burival on Unsplash
 
 APIs used for this project:
+
+<a href="https://openweathermap.org/current">Open Weather Map</a>
+
+<a href="https://developer.spotify.com/
+">Spotify Developer</a>
+
+
