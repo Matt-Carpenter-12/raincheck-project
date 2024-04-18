@@ -183,10 +183,10 @@ dropdownMenu.innerHTML = ""; //clear existing options
 
 function favorites() {
     console.log("favorites clicked...");
-    const savedFavs = JSON.parse(localStorage.getItem("favorites"));
+    const savedFavs = JSON.parse(localStorage.getItem("favorites")); // retrieves data from the browser's local storage under the key "favorites". assigns this JavaScript object to the variable savedFavs, allowing you to use the stored data in your code.
     console.log("savedFavs", savedFavs);
 
-    const dropdownMenu = document.querySelector(".dropdown-menu");
+    const dropdownMenu = document.querySelector(".dropdown-menu"); // selects the first HTML element with the class "dropdown-menu" on the webpage 
     dropdownMenu.innerHTML = ""; // Clear existing options
 
     for (const key in savedFavs) {
@@ -201,6 +201,6 @@ function favorites() {
             dropdownMenu.appendChild(listItem);
         }
     }
-}
+} //This code makes a list of clickable items in a dropdown menu. It goes through each item in savedFavs, creates a link for it, and adds it to the dropdown menu.
 
 document.getElementById("favoriteCityBtn").addEventListener("click", favorites);
