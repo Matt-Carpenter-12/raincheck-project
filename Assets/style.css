@@ -211,7 +211,7 @@ form {
 
 /* styles the embedded playlists */
 iframe {
-/* Bethany's code */
+/* Marly's code */
   width: 100%;
   height: 352px;
   border-radius: 20px;
@@ -221,7 +221,7 @@ iframe {
 footer {
 /* Lauren's code */
   text-align: center;
-  margin-top: 8%;
+  margin-top: 2%;
 /* Bethany's code */
   font-size: 14px;
 }

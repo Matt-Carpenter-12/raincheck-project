@@ -13,6 +13,7 @@ const playlistOne = document.querySelector(".playlist-one");
 const playlistTwo = document.querySelector(".playlist-two");
 const playlistThree = document.querySelector(".playlist-three");
 let searchPlaylistTitle = "";
+
 const favoritesArray = [];
 
 const getWeatherData = () => {
