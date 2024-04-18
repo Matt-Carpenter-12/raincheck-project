@@ -1,5 +1,4 @@
 const favoriteCity = document.querySelector('#favoriteCityBtn');
-const themeToggle = document.querySelector('#themeBtn');
 const submit = document.querySelector("#submitBtn");
 const userCity = document.querySelector("#userCity");
 const city = document.querySelector(".current-location");
@@ -175,11 +174,6 @@ function searchForPlaylist(token, search) {
         })
 }
 
-// function favorites() {
-//     console.log("favorites clicked...")
-//     const savedFavs = JSON.parse(localStorage.getItem("favorites"))
-//     console.log("savedFavs", savedFavs)
-// }
 document.addEventListener("DOMContentLoaded", function () {
     favoriteCity.addEventListener("click", favorites)
 })
