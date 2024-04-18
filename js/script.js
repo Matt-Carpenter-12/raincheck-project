@@ -177,8 +177,23 @@ function searchForPlaylist(token, search) {
 function favorites(){
     console.log("favorites clicked...")
     const savedFavs = JSON.parse(localStorage.getItem("favorites"))
-    console.log("savedFavs", savedFavs)
-   
+    console.log("savedFavs", savedFavs) 
 }
 document.addEventListener("DOMContentLoaded", function(){
     favoriteCity.addEventListener("click", favorites)})
+
+const dropdownMenu = document.querySelector(".dropdown-menu");
+dropdownMenu.innerHTML = ""; //clear existing options
+
+for (const key in savedFavs) {
+    if (savedFavs.hasOwnProperty(Key)){
+        const value = savedFavs[key];
+        const listItem = document.createElement("li");
+        const link = document.createElement("a");
+        link.classList.add("dropdown-item");
+        link.href = "a"; //set href as needed 
+        link.textContent = value; //assuming value is the text to display
+        listItem.appendChild(link);
+        dropdownMenu.appendChild(listItem);
+    }
+}
