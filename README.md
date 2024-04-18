@@ -8,7 +8,7 @@ RainCheck is a weather app with integrated music based on the current weather co
 
 Visit RainCheck here:
 
-To get the most out of RainCheck, start by entering your city, or selecting a previously saved city from the favorites list. The theme of the app updates with the current weather conditions. Additionally, three playlists are provided based on the weather conditions, giving the user a soundtrack for their day.
+To get the most out of RainCheck, start by entering your city to view the current weather conditions. After viewing a city, you can lick the history button to the right of the search button to view the three recent cities you have searched. The theme of the app updates with the current weather conditions. Additionally, three playlists are provided based on the weather conditions, giving the user a soundtrack for their day.
 
 ![screenshot1](Assets/Images/screenshot1.png) 
 ![screenshot2](Assets/Images/screenshot2.png)
