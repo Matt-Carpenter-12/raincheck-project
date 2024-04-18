@@ -28,11 +28,11 @@ Collaborators on this project:
 <a href="https://github.com/Matt-Carpenter-12">Matt Carpenter</a>
 
 
-Pictures used for this project:
-Rain: Photo by Inge Maria on Unsplash
-Sun: Photo by Tschernjawski Sergej on Unsplash
-Snow: Photo by Erol Ahmed on Unsplash
-Clouds: Photo by Zbynek Burival on Unsplash
+Pictures used for this project:  
+Rain: Photo by Inge Maria on Unsplash  
+Sun: Photo by Tschernjawski Sergej on Unsplash  
+Snow: Photo by Erol Ahmed on Unsplash  
+Clouds: Photo by Zbynek Burival on Unsplash  
 
 APIs used for this project:
 
