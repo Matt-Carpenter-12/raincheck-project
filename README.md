@@ -10,8 +10,8 @@ Visit RainCheck here:
 
 To get the most out of RainCheck, start by entering your city, or selecting a previously saved city from the favorites list. The theme of the app updates with the current weather conditions. Additionally, three playlists are provided based on the weather conditions, giving the user a soundtrack for their day.
 
-![screenshot1](./assets/images/screenshot1.png)
-![screenshot2](./assets/images/screenshot2.png)
+![screenshot1](Assets/Images/screenshot1.png) 
+![screenshot2](Assets/Images/screenshot2.png)
 
 ## Credits
 
