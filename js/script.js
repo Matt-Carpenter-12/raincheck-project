@@ -1,4 +1,4 @@
-const favoriteCity = document.querySelector('#favoriteCityBtn');
+const favoriteCity = document.querySelector('#historyCityBtn');
 const submit = document.querySelector("#submitBtn");
 const userCity = document.querySelector("#userCity");
 const city = document.querySelector(".current-location");
